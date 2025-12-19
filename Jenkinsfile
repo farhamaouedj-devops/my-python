@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Run tests') {
             steps {
-                sh 'python3 test_calculs.py'
+                // Lancer pytest directement
+                sh 'pytest test_calculs.py'
             }
         }
     }
