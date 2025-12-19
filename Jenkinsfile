@@ -4,11 +4,7 @@ pipeline {
     stages {
         stage('Run tests') {
             steps {
-                sh '''
-                #!/bin/bash
-                source /opt/venv/bin/activate
-                python3 test_calculs.py
-                '''
+                sh 'python3 test_calculs.py'
             }
         }
     }
